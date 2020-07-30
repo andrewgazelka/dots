@@ -14,7 +14,7 @@ alias va "vagrant"
 alias vai "vagrant init"
 alias vau "vagrant up"
 alias vas "vagrant ssh"
-alias vad "vagrant down"
+alias vad "vagrant destroy"
 alias vrl "vagrant reload"
 
 # Java
