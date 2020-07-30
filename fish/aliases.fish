@@ -14,6 +14,8 @@ alias va "vagrant"
 alias vai "vagrant init"
 alias vau "vagrant up"
 alias vas "vagrant ssh"
+alias vad "vagrant down"
+alias vrl "vagrant reload"
 
 # Java
 alias j8 "set -x JAVA_HOME $JAVA8_HOME"
