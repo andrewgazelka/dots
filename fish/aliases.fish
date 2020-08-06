@@ -43,7 +43,7 @@ alias gp 'git push'
 alias gdiff 'git diff'
 alias gd 'git difftool'
 alias gco 'git checkout'
-alias gc "git commit" 
+alias gc "git commit && git push" 
 alias gi "git init"
 alias gcr "git create"
 alias gcrp "git create -p"
@@ -136,7 +136,7 @@ alias p3i "pip3 install"
 
 # tmux
 alias rn "tmux rename-window"
-alias t "tmux"
+alias tm "tmux"
 alias tl "tmux ls"
 alias tat "tmux a -t"
 alias ta "tmux a"
@@ -153,10 +153,13 @@ alias mi "mvn install"
 
 # Flutter
 alias f "flutter" 
+alias fr "flutter run"
 alias fpg "flutter pub get"
 alias fjs "flutter pub run build_runner build"
 
 # Misc
+alias x "./start.sh"
+alias ca "cat"
 alias vc "v $HOME/.config/fish/aliases.fish"
 alias rp "realpath"
 alias lsg "ls | grep -i"
@@ -179,6 +182,7 @@ alias le=less
 alias v "vim"
 alias vb 'vim $b'
 alias vim=nvim
+alias vj "v -c 'set filetype=json'" #json vim
 alias cl clion
 alias cll "clion ."
 
@@ -187,16 +191,15 @@ alias cll "clion ."
 alias pip=pip3
 alias python=python3 
 
-
 alias rl "readlink -f"
-alias p "prevd"
+alias p "pure"
 alias reload '. ~/.config/fish/config.fish' # Reload configuration
 alias r ranger
 alias tree='tree -C' # Make tree colored
 alias w wget
-alias uz gunzip
 alias st "speedtest"
 
+alias irb "irb --simple-prompt"
 alias cm "chmod +x" 
 
 # Directory
@@ -207,6 +210,13 @@ alias cdp "c $PROJECTS"
 alias uhg "c $PROJECTS/UHG"
 alias sa "c $PROJECTS/SA"
 alias dl "c $HOME/Downloads" 
+
+alias winnie "big5 $UHG/assets/winnie-pooh.json | vj"
+
+
 ## Classes
 alias 4 "cd $PROJECTS/School/csci4061"
 
+if not set -q $PURE
+  p
+end

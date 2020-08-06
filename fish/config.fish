@@ -2,14 +2,16 @@
 set -g fish_emoji_width 2
 set START (pwd) 
 
+set -Ux APPS Discord
 # Path
-set -ax PATH "$HOME/.cargo/bin" "/usr/local/opt/coreutils/libexec/gnubin" ~/.jetbrains ~/.sdk/flutter/bin 
+set -ax PATH "$HOME/.cargo/bin" "/usr/local/opt/coreutils/libexec/gnubin" ~/.jetbrains ~/.sdk/flutter/bin "$HOME/.pub-cache/bin"
 set -Ux ANDROID_HOME /Users/andrewgazelka/Library/Android/sdk
 
 # Editor options
 set -Ux PAGER less
 set -Ux VISUAL nvim
 set -Ux EDITOR nvim
+set -Ux NODE_PATH "$HOME/.config/yarn/global/node_modules"
 
 # Autojump
  [ -f /usr/local/share/autojump/autojump.fish ]; and source /usr/local/share/autojump/autojump.fish 
@@ -44,6 +46,7 @@ set -g theme_color_scheme terminal-dark
 
 # Projects 
 set -x PROJECTS "$HOME/Projects" 
+set -x UHG "$PROJECTS/UHG"
 
 source $HOME/.config/fish/aliases.fish
 
